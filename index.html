@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .fullContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(217, 54%, 11%);
+      min-height: 100vh;
+    }
+
+    .cart {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px; 
+      height: 100%;
+      background-color: hsl(216, 50%, 16%);
+      padding: 20px;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, .1));
+    }
+
+    .cart img {
+      width: 100%;
+    }
+
+    .bottomSmall {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+
+    .bottomSmall img {
+      width: 24px;
+      height: 24px;
+      padding-right: 0.5rem;
+    }
+
+    .bottomSmall div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+    }
+
+    .creation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border-top: 1px solid gray;
+      padding-top: 2rem;
+    }
+
+    .creation img {
+      width: 20%;
+      padding-right: 5px;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    .eth p {
+      color: hsl(178, 100%, 50%);
+    }
+
+    p {
+      color: rgb(158, 158, 158);
+    }
+
+    .text h2 {
+      padding-top: 0.5rem;
+    }
+    .text p {
+      padding-top: 1rem;
+    }
+
+    .name:hover,.text>h2:hover {
+      color: hsl(178, 100%, 50%);
+    }
+
+    .equilibrium {
+      position: relative;
+    }
+
+    .imgE {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      opacity: 50%;
+      transition: .3s ease-in-out;
+    }
+
+    .imgE:hover {
+      background-color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+    .imgE img {
+      visibility: hidden;
+      width: 80px;
+    }
+
+    .imgE:hover img {
+      visibility: visible;
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translateY(-50%);
+    }
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media only screen and (max-width: 330px) { 
+      h2{
+        font-size: medium;
+      }
+
+      p {
+        font-size: small;
+      }
+
+      .cart {
+        width: 90%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="fullContainer">
+    <div class="cart">
+
+      <div class="equilibrium">
+        <img  src="./images/image-equilibrium.jpg" alt="img">
+        <div class="imgE">
+          <img src="./images/icon-view.svg" alt="view">
+        </div>
+      </div>
+
+      <div class="text">
+        <h2>Equilibrium #3429</h2>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+      </div>
+
+      <div class="bottomSmall">
+
+        <div class="eth">
+          <img src="./images/icon-ethereum.svg" alt="etheremu">
+          <p>0.041ETH</p>
+        </div>
+
+        <div>
+          <img src="./images/icon-clock.svg" alt="clock">
+          <p>3 days left</p>
+        </div>
+
+      </div>
+
+      <div class="creation">
+        <img src="./images/image-avatar.png" alt="avatar">
+        <p><small>Creation of</small> <span class="name"> Jules Wyvern </span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Rajko Radojkovic</a>.
+  </div>
+</body>
+</html>
